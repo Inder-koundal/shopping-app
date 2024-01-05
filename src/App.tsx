@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid, } from '@mui/material';
+import AppToolBar from './Components/Common/AppBar';
+import ProductList from './Components/Views/Products/ProductList';
 
-function App() {
+
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container>
+      <Grid item xs={12}>
+        <AppToolBar />
+      </Grid>
+      <Grid item xs={12}>
+        <div style={{padding: 30}}>
+          <ProductList />
+        </div>
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export default App;
+
