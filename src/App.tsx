@@ -1,6 +1,7 @@
 import { Grid, } from '@mui/material';
 import AppToolBar from './Components/Common/AppBar';
-import ProductList from './Components/Views/Products/ProductList';
+import { RouterProvider } from 'react-router-dom';
+import { routes } from './routes';
 
 
 const App: React.FC = () => {
@@ -11,8 +12,8 @@ const App: React.FC = () => {
         <AppToolBar />
       </Grid>
       <Grid item xs={12}>
-        <div style={{padding: 30}}>
-          <ProductList />
+        <div style={{padding: 30, marginTop: 45}}>
+        <RouterProvider router={routes} /> 
         </div>
       </Grid>
     </Grid>
